@@ -15,7 +15,7 @@ jobs:
 
     - name: Create Azure Resources
       run:  |
-        az group create--name ${{ vars.RESOURCE_GROUP }} --location ${{ vars.LOCATION }}
+        az group create --name ${{ vars.RESOURCE_GROUP }} --location ${{ vars.LOCATION }}
 
         az appservice plan create --name ${{ vars.PLAN_NAME }} --resource-group ${{ vars.RESOURCE_GROUP }} --sku B1 --is-linux
 
